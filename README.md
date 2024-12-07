@@ -73,26 +73,40 @@
     * Near Protocol (NEAR - a scalable and developer-friendly blockchain platform) - $<span id="near-price"></span> 
     * Akash Network (AKT - a decentralized cloud computing marketplace) - $<span id="akt-price"></span> 
 
+<h2>Token Prices</h2>
+
+<p>Bitcoin (BTC): $<span id="bitcoin-price"></span></p>
+<p>Ethereum (ETH): $<span id="ethereum-price"></span></p>
+<p>Ripple (XRP): $<span id="ripple-price"></span></p>
+<p>Stellar (XLM): $<span id="stellar-price"></span></p>
+<p>Chainlink (LINK): $<span id="chainlink-price"></span></p>
+<p>Decentraland (MANA): $<span id="decentraland-price"></span></p>
+<p>Sandbox (SAND): $<span id="sandbox-price"></span></p>
+<p>Fetch.ai (FET): $<span id="fetch-ai-price"></span></p>
+<p>SingularityNET (AGIX): $<span id="singularitynet-price"></span></p>
+
 <script>
   function updatePrices() {
-    fetch('https://api.coingecko.com/api/v3/simple/price?ids=ripple, stellar, algorand, chainlink, the-graph, avalanche-2, cosmos, quant-network, ethereum, polkadot, kaspa, constellation-labs, solana, decentraland, the-sandbox, gala, beam, apecoin, axie-infinity, immutable-x, fetch-ai, singularitynet, bittensor, render-token, near, akash-network&vs_currencies=usd')
+    fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,ripple,stellar,chainlink,decentraland,sandbox,fetch-ai,singularitynet&vs_currencies=usd')
       .then(response => response.json())
       .then(data => {
-        // Update the prices in the spans
-        for (const token in data) {
-          const priceSpan = document.getElementById(`${token.replace(/-/g, '')}-price`);
-          if (priceSpan) {
-            priceSpan.textContent = data[token].usd;
-          }
-        }
+        document.getElementById('bitcoin-price').textContent = data.bitcoin.usd;
+        document.getElementById('ethereum-price').textContent = data.ethereum.usd;
+        document.getElementById('ripple-price').textContent = data.ripple.usd;
+        document.getElementById('stellar-price').textContent = data.stellar.usd;
+        document.getElementById('chainlink-price').textContent = data.chainlink.usd;
+        document.getElementById('decentraland-price').textContent = data.decentraland.usd;
+        document.getElementById('sandbox-price').textContent = data.sandbox.usd;
+        document.getElementById('fetch-ai-price').textContent = data.fetch.ai.usd;
+        document.getElementById('singularitynet-price').textContent = data.singularitynet.usd;
       });
   }
 
   // Update prices on page load
   updatePrices();
 
-  // Update prices every hour (optional - you can adjust the interval)
-  setInterval(updatePrices, 60000); // 3600000 milliseconds = 1 hour
+  // Update prices every minute
+  setInterval(updatePrices, 60000); 
 </script>
 
 
