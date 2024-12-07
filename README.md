@@ -32,8 +32,8 @@
       * **Write down your seed phrase\!** When you set up a self-custody wallet, it'll give you a "seed phrase" – a list of words or numbers. This is like the master key to your wallet. Write it down and keep it somewhere super safe (like a fireproof box or a safe deposit box). If you lose your phone or wallet, you can use this phrase to recover your XRP.
 
 * **ISO 20022:** This is a set of rules for financial messaging. Some people believe that cryptocurrencies that follow these rules could be more important in the future. Some notable ISO 20022-compliant cryptocurrencies include
-   * **Ripple's (XRP)**  
-   * **Stellar Lumens (XLM)**  
+   * **Ripple's (XRP)**  - $<span id="ripple-price"></span>
+   * **Stellar Lumens (XLM)** - $<span id="stellar-price"></span> 
    * **IOTA (MIOTA)**  
    * **Algorand (ALGO)**
    * **Quant (QNT)**  
