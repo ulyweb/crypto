@@ -73,4 +73,5 @@
     * Near Protocol (NEAR - a scalable and developer-friendly blockchain platform) - $<span id="near-price"></span> 
     * Akash Network (AKT - a decentralized cloud computing marketplace) - $<span id="akt-price"></span> 
 
-* **Risk:** Crypto can be volatile\! **Only invest what you can afford to lose** and, **do not forget it's important to do your own research.**
+* **Risk:** Crypto can be volatile\! **Only invest what you can afford to lose** and, **do not forget it's important to do your own research.**  
+    * __This is not financial advice.  Any investment decisions should be made after conducting your own research and consulting with a financial advisor.__  
