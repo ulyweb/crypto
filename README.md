@@ -73,42 +73,4 @@
     * Near Protocol (NEAR - a scalable and developer-friendly blockchain platform) - $<span id="near-price"></span> 
     * Akash Network (AKT - a decentralized cloud computing marketplace) - $<span id="akt-price"></span> 
 
-<h2>Token Prices</h2>
-
-<p>Bitcoin (BTC): $<span id="bitcoin-price"></span></p>
-<p>Ethereum (ETH): $<span id="ethereum-price"></span></p>
-<p>Ripple (XRP): $<span id="ripple-price"></span></p>
-<p>Stellar (XLM): $<span id="stellar-price"></span></p>
-<p>Chainlink (LINK): $<span id="chainlink-price"></span></p>
-<p>Decentraland (MANA): $<span id="decentraland-price"></span></p>
-<p>Sandbox (SAND): $<span id="sandbox-price"></span></p>
-<p>Fetch.ai (FET): $<span id="fetch-ai-price"></span></p>
-<p>SingularityNET (AGIX): $<span id="singularitynet-price"></span></p>
-
-<script>
-  function updatePrices() {
-    fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,ripple,stellar,chainlink,decentraland,sandbox,fetch-ai,singularitynet&vs_currencies=usd')
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('bitcoin-price').textContent = data.bitcoin.usd;
-        document.getElementById('ethereum-price').textContent = data.ethereum.usd;
-        document.getElementById('ripple-price').textContent = data.ripple.usd;
-        document.getElementById('stellar-price').textContent = data.stellar.usd;
-        document.getElementById('chainlink-price').textContent = data.chainlink.usd;
-        document.getElementById('decentraland-price').textContent = data.decentraland.usd;
-        document.getElementById('sandbox-price').textContent = data.sandbox.usd;
-        document.getElementById('fetch-ai-price').textContent = data.fetch.ai.usd;
-        document.getElementById('singularitynet-price').textContent = data.singularitynet.usd;
-      });
-  }
-
-  // Update prices on page load
-  updatePrices();
-
-  // Update prices every minute
-  setInterval(updatePrices, 60000); 
-</script>
-
-
-
 * **Risk:** Crypto can be volatile\! **Only invest what you can afford to lose** and, **do not forget it's important to do your own research.**
