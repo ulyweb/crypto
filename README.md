@@ -42,8 +42,8 @@
 
 * **Diversification:** Don't put all your eggs in one basket! Just like you wouldn't invest all your money in a single company, it's good to explore different cryptocurrencies. Here are a few categories and examples of utility tokens to consider:  
   * **Finance:**  
-    * XRP (fast cross-border payments) - $<span id="xrp-price"></span>
-    * Stellar (XLM - similar to XRP) - $<span id="xlm-price"></span>
+    * XRP (fast cross-border payments) - $<span id="Ripple-price"></span>
+    * Stellar (XLM - similar to XRP) - $<span id="stellar-price"></span>
     * Algorand (ALGO - fast and secure transactions) - $<span id="algo-price"></span> 
   * **Infrastructure:**  
     * Chainlink (LINK - connects blockchains to real-world data) - $<span id="link-price"></span> 
