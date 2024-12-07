@@ -40,38 +40,61 @@
    * **Hedera HashGraph (HBAR)**  
    * **XDC Network (XDC)**  
 
-* **Diversification:** Don't put all your eggs in one basket\! Just like you wouldn't invest all your money in a single company, it's good to explore different cryptocurrencies. Here are a few categories and examples of utility tokens to consider:  
+* **Diversification:** Don't put all your eggs in one basket! Just like you wouldn't invest all your money in a single company, it's good to explore different cryptocurrencies. Here are a few categories and examples of utility tokens to consider:  
   * **Finance:**  
-    * XRP (fast cross-border payments)  
-    * Stellar (XLM \- similar to XRP)  
-    * Algorand (ALGO \- fast and secure transactions)  
+    * XRP (fast cross-border payments) - $<span id="xrp-price"></span>
+    * Stellar (XLM - similar to XRP) - $<span id="xlm-price"></span>
+    * Algorand (ALGO - fast and secure transactions) - $<span id="algo-price"></span> 
   * **Infrastructure:**  
-    * Chainlink (LINK \- connects blockchains to real-world data)  
-    * The Graph (GRT \- helps organize blockchain data)  
-    * Avalanche (AVAX \- fast and scalable platform for decentralized applications)  
-    * Cosmos (ATOM \- interoperability between different blockchains)  
-    * Quant (QNT \- interoperability between different blockchains)  
+    * Chainlink (LINK - connects blockchains to real-world data) - $<span id="link-price"></span> 
+    * The Graph (GRT - helps organize blockchain data) - $<span id="grt-price"></span> 
+    * Avalanche (AVAX - fast and scalable platform for decentralized applications) - $<span id="avax-price"></span> 
+    * Cosmos (ATOM - interoperability between different blockchains) - $<span id="atom-price"></span> 
+    * Quant (QNT - interoperability between different blockchains) - $<span id="qnt-price"></span> 
   * **Future of Blockchain:**  
-    * Ethereum (ETH \- the foundation for many decentralized applications)  
-    * Polkadot (DOT \- connects different blockchains)  
-    * Kaspa (KAS \- a fast and scalable blockchain platform)  
-    * Constellation (DAG \- a scalable and secure platform for data)  
-    * Solana (SOL \- a high-performance blockchain platform)  
+    * Ethereum (ETH - the foundation for many decentralized applications) - $<span id="eth-price"></span> 
+    * Polkadot (DOT - connects different blockchains) - $<span id="dot-price"></span> 
+    * Kaspa (KAS - a fast and scalable blockchain platform) - $<span id="kas-price"></span> 
+    * Constellation (DAG - a scalable and secure platform for data) - $<span id="dag-price"></span> 
+    * Solana (SOL - a high-performance blockchain platform) - $<span id="sol-price"></span> 
   * **Metaverse:**  
-    * Decentraland (MANA \- virtual world ownership)  
-    * Sandbox (SAND \- gaming and virtual land)  
-    * Gala (GALA \- gaming platform with player ownership)  
-    * Beam (BEAM \- a private and scalable blockchain platform)  
-    * ApeCoin (APE \- governance token for the Bored Ape Yacht Club ecosystem)  
-    * Axie Infinity (AXS \- play-to-earn gaming platform)  
-    * Immutable X (IMX \- layer-2 scaling solution for NFTs)  
+    * Decentraland (MANA - virtual world ownership) - $<span id="mana-price"></span> 
+    * Sandbox (SAND - gaming and virtual land) - $<span id="sand-price"></span> 
+    * Gala (GALA - gaming platform with player ownership) - $<span id="gala-price"></span> 
+    * Beam (BEAM - a private and scalable blockchain platform) - $<span id="beam-price"></span> 
+    * ApeCoin (APE - governance token for the Bored Ape Yacht Club ecosystem) - $<span id="ape-price"></span> 
+    * Axie Infinity (AXS - play-to-earn gaming platform) - $<span id="axs-price"></span> 
+    * Immutable X (IMX - layer-2 scaling solution for NFTs) - $<span id="imx-price"></span> 
   * **AI Tokens:**  
-    * Fetch.ai (FET \- decentralized AI network)  
-    * SingularityNET (AGIX \- marketplace for AI services)  
-    * Bittensor (TAO \- decentralized machine learning network)  
-    * Render (RNDR \- decentralized GPU rendering network)  
-    * Near Protocol (NEAR \- a scalable and developer-friendly blockchain platform)  
-    * Akash Network (AKT \- a decentralized cloud computing marketplace)
+    * Fetch.ai (FET - decentralized AI network) - $<span id="fet-price"></span> 
+    * SingularityNET (AGIX - marketplace for AI services) - $<span id="agix-price"></span> 
+    * Bittensor (TAO - decentralized machine learning network) - $<span id="tao-price"></span> 
+    * Render (RNDR - decentralized GPU rendering network) - $<span id="rndr-price"></span> 
+    * Near Protocol (NEAR - a scalable and developer-friendly blockchain platform) - $<span id="near-price"></span> 
+    * Akash Network (AKT - a decentralized cloud computing marketplace) - $<span id="akt-price"></span> 
+
+<script>
+  function updatePrices() {
+    fetch('https://api.coingecko.com/api/v3/simple/price?ids=xrp,stellar,algorand,chainlink,the-graph,avalanche-2,cosmos,quant-network,ethereum,polkadot,kaspa,constellation-labs,solana,decentraland,the-sandbox,gala,beam,apecoin,axie-infinity,immutable-x,fetch-ai,singularitynet,bittensor,render-token,near,akash-network&vs_currencies=usd')
+      .then(response => response.json())
+      .then(data => {
+        // Update the prices in the spans
+        for (const token in data) {
+          const priceSpan = document.getElementById(`${token.replace(/-/g, '')}-price`);
+          if (priceSpan) {
+            priceSpan.textContent = data[token].usd;
+          }
+        }
+      });
+  }
+
+  // Update prices on page load
+  updatePrices();
+
+  // Update prices every hour (optional - you can adjust the interval)
+  setInterval(updatePrices, 3600000); // 3600000 milliseconds = 1 hour
+</script>
+
 
 
 * **Risk:** Crypto can be volatile\! **Only invest what you can afford to lose** and, **do not forget it's important to do your own research.**
