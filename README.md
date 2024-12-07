@@ -75,7 +75,7 @@
 
 <script>
   function updatePrices() {
-    fetch('https://api.coingecko.com/api/v3/simple/price?ids=xrp,stellar,algorand,chainlink,the-graph,avalanche-2,cosmos,quant-network,ethereum,polkadot,kaspa,constellation-labs,solana,decentraland,the-sandbox,gala,beam,apecoin,axie-infinity,immutable-x,fetch-ai,singularitynet,bittensor,render-token,near,akash-network&vs_currencies=usd')
+    fetch('https://api.coingecko.com/api/v3/simple/price?ids=Ripple,stellar,algorand,chainlink,the-graph,avalanche-2,cosmos,quant-network,ethereum,polkadot,kaspa,constellation-labs,solana,decentraland,the-sandbox,gala,beam,apecoin,axie-infinity,immutable-x,fetch-ai,singularitynet,bittensor,render-token,near,akash-network&vs_currencies=usd')
       .then(response => response.json())
       .then(data => {
         // Update the prices in the spans
