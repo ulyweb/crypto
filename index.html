@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crypto Info</title>
+</head>
+<body>
+
+  <h1>Cryptocurrency Information</h1>
+
+  <h2>Token Prices</h2>
+  <p>Bitcoin (BTC): $<span id="bitcoin-price"></span></p>
+  <p>Ethereum (ETH): $<span id="ethereum-price"></span></p>
+  <p>Ripple (XRP): $<span id="ripple-price"></span></p>
+  <script>
+    function updatePrices() {
+      fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,ripple,stellar,chainlink&vs_currencies=usd')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('bitcoin-price').textContent = data.bitcoin.usd;
+          document.getElementById('ethereum-price').textContent = data.ethereum.usd;
+          document.getElementById('ripple-price').textContent = data.ripple.usd;
+          // ... update other token prices similarly
+        });
+    }
+
+    // Update prices on page load
+    updatePrices();
+
+    // Update prices every minute
+    setInterval(updatePrices, 60000); 
+  </script>
+
+</body>
+</html>
