@@ -22,9 +22,9 @@
 
 * XRP is a cryptocurrency used for fast and cheap international transfers. It might play a bigger role in finance in the future, but it's important to do your own research. [Article of XRP History](https://coinmarketcap.com/academy/article/xrp-a-history)
 
+#
 **4\. Important Things to Remember:**
 
-#
 * **Security:**  
   * **Account Security:** When you create your accounts on Coinbase, Robinhood, or Uphold, make sure to enable 2-factor authentication (2FA). This adds an extra layer of security by requiring a code from an authenticator app on your phone in addition to your password. Don't rely just on SMS or email verification – use an authenticator app like Google Authenticator or Authy. This makes your account much more secure because you control the codes.  
   * **Crypto Storage:** It's totally fine to keep your XRP on Coinbase when you're just starting out, especially if you have less than $500 worth. But, if you buy more and your investment goes over $500, you want to keep it safer.  
