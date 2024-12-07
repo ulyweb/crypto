@@ -81,4 +81,4 @@
 
 #
 
-### **Risk:** Crypto can be volatile\! **Only invest what you can afford to lose** and, **do not forget it's important to do your own research.**
+* **Risk:** Crypto can be volatile\! **Only invest what you can afford to lose** and, **do not forget it's important to do your own research.**
