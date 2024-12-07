@@ -1,4 +1,4 @@
-#### Here's some info to get you started:
+### Here's some info to get you started:
 
 #
 **1\. Getting Started:**
@@ -80,5 +80,5 @@
     * Akash Network (AKT \- a decentralized cloud computing marketplace)
 
 #
-> [!IMPORTANT]
-> **Risk:** Crypto can be volatile\! **Only invest what you can afford to lose** and, **do not forget it's important to do your own research.**
+
+### **Risk:** Crypto can be volatile\! **Only invest what you can afford to lose** and, **do not forget it's important to do your own research.**
