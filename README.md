@@ -42,7 +42,7 @@
 
 * **Diversification:** Don't put all your eggs in one basket! Just like you wouldn't invest all your money in a single company, it's good to explore different cryptocurrencies. Here are a few categories and examples of utility tokens to consider:  
   * **Finance:**  
-    * XRP (fast cross-border payments) - $<span id="Ripple-price"></span>
+    * XRP (fast cross-border payments) - $<span id="ripple-price"></span>
     * Stellar (XLM - similar to XRP) - $<span id="stellar-price"></span>
     * Algorand (ALGO - fast and secure transactions) - $<span id="algo-price"></span> 
   * **Infrastructure:**  
@@ -75,7 +75,7 @@
 
 <script>
   function updatePrices() {
-    fetch('https://api.coingecko.com/api/v3/simple/price?ids=Ripple,stellar,algorand,chainlink,the-graph,avalanche-2,cosmos,quant-network,ethereum,polkadot,kaspa,constellation-labs,solana,decentraland,the-sandbox,gala,beam,apecoin,axie-infinity,immutable-x,fetch-ai,singularitynet,bittensor,render-token,near,akash-network&vs_currencies=usd')
+    fetch('https://api.coingecko.com/api/v3/simple/price?ids=ripple,stellar,algorand,chainlink,the-graph,avalanche-2,cosmos,quant-network,ethereum,polkadot,kaspa,constellation-labs,solana,decentraland,the-sandbox,gala,beam,apecoin,axie-infinity,immutable-x,fetch-ai,singularitynet,bittensor,render-token,near,akash-network&vs_currencies=usd')
       .then(response => response.json())
       .then(data => {
         // Update the prices in the spans
@@ -92,7 +92,7 @@
   updatePrices();
 
   // Update prices every hour (optional - you can adjust the interval)
-  setInterval(updatePrices, 3600000); // 3600000 milliseconds = 1 hour
+  setInterval(updatePrices, 60000); // 3600000 milliseconds = 1 hour
 </script>
 
 
