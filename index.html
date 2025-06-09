@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crypto Project by ulyweb</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <style>
+    :root {
+      --color-bg-light: #ffffff;
+      --color-bg-dark: #121212;
+      --color-text-light: #000000;
+      --color-text-dark: #ffffff;
+      --color-primary: #4CAF50;
+      --transition: 0.3s ease;
+    }
+
+    [data-theme="light"] {
+      background-color: var(--color-bg-light);
+      color: var(--color-text-light);
+    }
+
+    [data-theme="dark"] {
+      background-color: var(--color-bg-dark);
+      color: var(--color-text-dark);
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      transition: background-color var(--transition), color var(--transition);
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1, h2 {
+      margin: 0.5em 0;
+    }
+
+    nav {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    button.theme-toggle {
+      cursor: pointer;
+      padding: 0.5em 1em;
+      margin-top: 1em;
+      background: var(--color-primary);
+      border: none;
+      color: white;
+      border-radius: 5px;
+      transition: background var(--transition);
+    }
+
+    button.theme-toggle:hover {
+      background: #45a049;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .faq-item {
+      margin-bottom: 1em;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 1em;
+    }
+
+    .faq-question {
+      cursor: pointer;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .faq-answer {
+      display: none;
+      padding-top: 0.5em;
+      transition: all var(--transition);
+    }
+
+    .faq-answer.open {
+      display: block;
+    }
+
+    .video-placeholder {
+      background: #000;
+      color: #fff;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2em;
+      margin-bottom: 2rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, textarea {
+      padding: 0.5em;
+      margin-bottom: 1em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      background: var(--color-primary);
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background: #45a049;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9em;
+      opacity: 0.6;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.5em; }
+      .video-placeholder { height: 200px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header data-aos="fade-down">
+    <h1>Welcome to My Crypto Project</h1>
+    <p>Your source for secure crypto education & tools</p>
+    <button class="theme-toggle">Toggle Theme</button>
+  </header>
+
+  <nav data-aos="fade-up">
+    <a href="#about">About</a> |
+    <a href="#faq">FAQ</a> |
+    <a href="#tutorial">Tutorial</a> |
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" data-aos="fade-in">
+    <h2>About This Project</h2>
+    <p>This is a sample GitHub Pages–friendly site for showcasing your crypto tool, app, or documentation. It features a modern UI built using only HTML, CSS, and minimal JavaScript for interactivity.</p>
+  </section>
+
+  <section id="faq" data-aos="fade-up">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">What is this project about? <span>+</span></div>
+      <div class="faq-answer">It's a simple, GitHub Pages–compatible project that helps demonstrate crypto-related tutorials or apps.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How do I contribute? <span>+</span></div>
+      <div class="faq-answer">Fork the repo, make your changes, and submit a pull request!</div>
+    </div>
+  </section>
+
+  <section id="tutorial" data-aos="zoom-in">
+    <h2>Video Tutorial</h2>
+    <div class="video-placeholder">[ Embedded YouTube Placeholder ]</div>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <form onsubmit="validateForm(event)">
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <input type="submit" value="Send (No backend)" />
+    </form>
+  </section>
+
+  <footer data-aos="fade-in">
+    &copy; 2025 ulyweb. All rights reserved.
+  </footer>
+
+  <!-- AOS (Animate on Scroll) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // FAQ Toggle
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        answer.classList.toggle('open');
+        q.querySelector('span').textContent = answer.classList.contains('open') ? '-' : '+';
+      });
+    });
+
+    // Theme Toggle
+    const toggleBtn = document.querySelector('.theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      html.setAttribute('data-theme', currentTheme === 'light' ? 'dark' : 'light');
+    });
+
+    // Contact Form Validation
+    function validateForm(e) {
+      const emailInput = document.getElementById('email');
+      const email = emailInput.value;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        e.preventDefault();
+      } else {
+        alert("This is a placeholder form only. No message will be sent.");
+        e.preventDefault();
+      }
+    }
+  </script>
+</body>
+</html>
