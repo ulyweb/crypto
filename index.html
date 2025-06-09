@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cryptocurrency Investing: A Beginner's Guide</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #333333;
+      --accent-color: #007bff;
+      --container-bg: #f8f9fa;
+      --faq-bg: #e9ecef;
+      --faq-border: #ccc;
+      --button-bg: #007bff;
+      --button-hover-bg: #0056b3;
+    }
+
+    body.dark-theme {
+      --bg-color: #121212;
+      --text-color: #f0f0f0;
+      --accent-color: #66b2ff;
+      --container-bg: #1e1e1e;
+      --faq-bg: #333333;
+      --faq-border: #444444;
+      --button-bg: #66b2ff;
+      --button-hover-bg: #3399ff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      background-color: var(--accent-color);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .container {
+      background-color: var(--container-bg);
+      margin: 1rem auto;
+      padding: 1.5rem;
+      border-radius: 8px;
+      max-width: 900px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: background-color 0.3s;
+    }
+
+    h1, h2, h3 {
+      color: var(--accent-color);
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .button {
+      background-color: var(--button-bg);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: var(--button-hover-bg);
+    }
+
+    .faq-question {
+      cursor: pointer;
+      padding: 10px;
+      background-color: var(--faq-bg);
+      border: 1px solid var(--faq-border);
+      margin-top: 10px;
+      border-radius: 4px;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 10px;
+      border-left: 3px solid var(--accent-color);
+      margin-bottom: 10px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: var(--button-bg);
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 1rem;
+        padding: 1rem;
+      }
+    }
+
+    [data-aos] {
+      opacity: 0;
+      transition-property: opacity, transform;
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <header>
+    <h1>Cryptocurrency Investing: A Beginner's Guide</h1>
+  </header>
+
+  <div class="container" data-aos="fade-up">
+    <h2>Welcome</h2>
+    <p>Start your journey into crypto investing with this beginner-friendly guide.</p>
+  </div>
+
+  <div class="container" data-aos="fade-up">
+    <h2>FAQ</h2>
+    <div class="faq-question">What is cryptocurrency?</div>
+    <div class="faq-answer">Cryptocurrency is a digital or virtual currency secured by cryptography.</div>
+    <div class="faq-question">Is it safe to invest?</div>
+    <div class="faq-answer">Crypto is volatile. Only invest what you can afford to lose and do your own research.</div>
+  </div>
+
+  <div class="container" data-aos="fade-up">
+    <h2>Contact</h2>
+    <form class="contact-form" onsubmit="return validateForm()">
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="button">Send</button>
+    </form>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+
+    function toggleTheme() {
+      document.body.classList.toggle('dark-theme');
+    }
+
+    function validateForm() {
+      const email = document.getElementById('email').value;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return false;
+      }
+      alert('Message sent (placeholder only).');
+      return false; // Prevent actual submission
+    }
+  </script>
+</body>
+</html>
