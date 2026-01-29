@@ -73,3 +73,20 @@ Here is exactly what you tell them:
 > 
 > *I still own the car. I can take it back whenever I want. But now, instead of just sitting in the dark, it pays for my groceries."*
 
+
+
+
+>[!TIP]
+> ## To run powershell with ExecutionPolicy Bypass
+>> 
+````
+ PowerShell -ExecutionPolicy Bypass -File .\Run-XeroxDuplicatesReport.ps1 
+````
+
+
+> [!IMPORTANT]
+> ✅ ***Run **(`Win + R`)** Powershell with A-Administrator Privileges***  
+````
+RunAs /noprofile /user:%USERDOMAIN%\a-%USERNAME% "powershell \"Start-Process powershell \" -Verb RunAs"
+````
+
