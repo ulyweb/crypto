@@ -1,10 +1,12 @@
-Complete breakdown of the **FAssets** system.
 
-This is everything about (Minting FXRP, Kinetic, Staking) exactly what this system was designed for.
+> [!IMPORTANT]
+> # ***Complete breakdown of the **FAssets** system.***  
+>>This is everything about (Minting FXRP, Kinetic, Staking) exactly what this system was designed for.
 
-### 1. The "Coat Check" 2.0 (The Official FAssets Model)
+>[!TIP]
+> ## ✅1. The "Coat Check" 2.0 (The Official FAssets Model)
+>>We used a simple "Coat Check" analogy before. Now, let's upgrade it to the **"Armored Bank Vault"** analogy, which is more accurate for your Co-worker and Cousin because it explains the **Safety** and **Earnings**.
 
-We used a simple "Coat Check" analogy before. Now, let's upgrade it to the **"Armored Bank Vault"** analogy, which is more accurate for your Co-worker and Cousin because it explains the **Safety** and **Earnings**.
 
 #### The Scenario: "The Dead Gold vs. The Working Gold"
 
@@ -76,17 +78,6 @@ Here is exactly what you tell them:
 
 
 
->[!TIP]
-> ## To run powershell with ExecutionPolicy Bypass
->> 
-````
- PowerShell -ExecutionPolicy Bypass -File .\Run-XeroxDuplicatesReport.ps1 
-````
 
 
-> [!IMPORTANT]
-> ✅ ***Run **(`Win + R`)** Powershell with A-Administrator Privileges***  
-````
-RunAs /noprofile /user:%USERDOMAIN%\a-%USERNAME% "powershell \"Start-Process powershell \" -Verb RunAs"
-````
 
